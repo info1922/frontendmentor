@@ -1,0 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+:root {
+    --blue-color-primary: hsl(223, 87%, 63%);
+    --pale-blue-color-secondary: hsl(223, 100%, 88%);
+    --light-red-color-secondary: hsl(354, 100%, 66%);
+    --gray-color-neutral: hsl(0, 0%, 59%);
+    --very-dark-blue-color-neutral: hsl(209, 33%, 12%);
+    /* --font-size-fuente: 1.25rem; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+}
+
+main {
+    
+    padding: 4.2em 2em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    justify-content:start;
+    gap: 2em;
+}
+
+img.logo {
+    width: 70px;
+    padding: 1.5em 0em;
+}
+
+h1 {
+    color: var(--gray-color-neutral);
+    font-weight: 300;
+    
+    font-size: 1.7rem;
+}
+
+span {
+    color: var(--very-dark-blue-color-neutral);
+    font-weight: 700;
+}
+
+p {
+    /* padding-bottom: 2.3em; */
+}
+
+.container_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 1em;
+    padding: 0.8em 0;
+}
+
+.submitForm_input {
+    border: none;
+    padding: 1.2em 2.7em;
+    border: 0.15em solid var(--pale-blue-color-secondary);
+    border-radius: 1.87em;
+    font-size: 0.8rem;
+    font-weight: 300;
+    /* color: var(--pale-blue-color-secondary); */
+}
+
+.submitForm_submit {
+    background-color: var(--blue-color-primary);
+    border: none;
+    padding: 1.2em 0em;
+    border-radius: 1.87em;
+    color: white;
+    font-weight: 600;
+    box-shadow: blue;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+
+.submitForm_submit:hover {
+    box-shadow: -2px 6px 20px -6px rgba(17, 78, 176, 0.637);
+}
+
+.submitForm_input:focus {
+    color: var(--very-dark-blue-color-neutral);
+    border: 0.15em solid var(--pale-blue-color-secondary);
+}
+
+img.panel {
+    width: 100%;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1.4em;
+    width: 100%;
+}
+
+
+.col-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.error {
+    color: hsl(354, 73%, 54%);
+    display: none;
+}
+
+.success {
+    color: hsl(118, 71%, 41%);
+    display: none;
+}
+
+.col-3 {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding-top: 1em;
+}
+
+.icono {
+    /* border: 1px solid rgb(214, 214, 214); */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 1.5em;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+ion-icon {
+    font-size: 1.3rem;
+    padding: 0.4em;
+    color: var(--blue-color-primary);
+    transition: color 1s;
+}
+
+
+.icono:hover {
+    background-color: var(--blue-color-primary);
+    transform: scale(1.3);
+}
+
+ion-icon:hover {
+    color: white;
+}
+
+.copy {
+    font-size: 0.8rem;
+    color: rgb(179, 179, 179);
+}
+
+
+@media (min-width: 650px) {
+    main {
+        gap: 0em;
+    }
+    .container_form {
+        display: grid;
+        grid-template-columns: 2fr repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 26px;
+        grid-row-gap: 12px;
+        /* flex-direction: row; */
+        width: 100%;
+        text-align: left;
+    }
+    
+    label {
+        padding: 0em 1.5em;
+    }
+
+    .error, .success {
+        order: 3;
+        grid-area: 2 / 1 / 2 / 1;
+    }
+
+    img.panel {
+        max-width: 630px;
+    }
+
+    .submitForm_submit {
+        width: 100%;
+    }
+    .submitForm_input {
+        width: 100%;
+    }
+
+    .col-3 {
+        padding-top: 2em;
+        width: 30%;
+    }
+
+    ion-icon {
+
+        font-size: 1.6rem;
+    }
+    
+    .col-4 {
+        padding-top: 2em;
+    }
+
+    .icono:hover {
+        background-color: var(--blue-color-primary);
+        transform: scale(1.2);
+    }
+    
+}
