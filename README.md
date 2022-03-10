@@ -10,7 +10,7 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
 ### Links
 
 
-- Live Site URL: [Solution](https://your-live-site-url.com)
+- Live Site URL: [Solution](https://ping-coming-soon-page-master-teal.vercel.app)
 
 
 ### Built with
